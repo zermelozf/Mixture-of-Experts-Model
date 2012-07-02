@@ -10,7 +10,7 @@ The input, gating and outpu nodes can have arbitrary dimension.
 The training data is generated from a random instance of the model itself. The parameters are then reinitialized and re-learned.
 
 The training_mode variable allows to specify the optimization method used in the maximization step:
-1 -> Newton-Raphson
-2 -> Gradient Ascent
+    1 -> Newton-Raphson
+    2 -> Gradient Ascent
 
 
