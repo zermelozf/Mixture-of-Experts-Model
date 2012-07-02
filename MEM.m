@@ -1,11 +1,11 @@
 %%%% BUILD DATASET %%%%
 clear;
 training_mode = 1;
-nb_samples = 1000; input_dim = 60; output_dim = 30; nb_topics = 10; nb_iter = 15;
+nb_samples = 1000; input_dim = 1; output_dim = 2; nb_topics = 3; nb_iter = 15;
 x = -1 + 2*rand(nb_samples, input_dim+1);
 x(:,end) = 1;
 
-T = 5*(-1+2*rand(input_dim+1, nb_topics))/sqrt(input_dim);%/sqrt(output_dim);
+T = 2*(-1+2*rand(input_dim+1, nb_topics))/sqrt(input_dim);%/sqrt(output_dim);
 % T = [-2, 0, 2;-1, 3, 1];
 t = softmax((x*T)')';
 
@@ -170,7 +170,5 @@ plot( data(:,1),data(:,2), 'k.', data2(:,1),data2(:,2), 'b.')
  
 subplot(2,2,4);
 plot(1:nb_iter, ll)
-
-Q1'
 
    
